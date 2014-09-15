@@ -1,13 +1,16 @@
-require "rails_helper"
+require 'rails_helper'
 
-feature "User creating retro items" do
-  scenario "User creates a new retro item" do
+feature 'User creating retro items' do
+  scenario 'User creates a new retro item' do
     visit root_path
 
-    expect(page).to have_text("Widget was successfully created.")
+    expect(page).to have_title('We-Retro')
 
-    fill_in "Name", :with => "My Widget"
-    click_button "Create Widget"
+    # page should display retro items
+    expect(page).to have_css('.retro-items')
+
+    fill_in 'Retro Item', :with => 'Test'
+    click_button 'Add Retro'
 
   end
 end

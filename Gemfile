@@ -5,6 +5,7 @@ gem 'rails', '4.1.5'
 # Use sqlite3 as the database for Active Record
 # gem 'bcrypt', '~> 3.1.7'
 gem 'coffee-rails', '~> 4.0.0'
+gem 'haml'
 gem 'jbuilder', '~> 2.0'
 gem 'jquery-rails'
 gem 'sqlite3'
@@ -20,7 +21,7 @@ group :development do
 end
 
 group :development, :test do
-  gem 'debugger', group: [:development, :test]
+  gem 'factory_girl_rails'
   gem 'rspec-rails'
   gem 'capybara'
 end

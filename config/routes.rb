@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  root 'item#index'
+
+  # get 'item/create,'
+  # get 'item/update,'
+  # get 'item/delete,'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
