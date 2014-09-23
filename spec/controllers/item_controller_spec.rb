@@ -3,8 +3,7 @@ require 'rails_helper'
 RSpec.describe ItemController, :type => :controller do
 
   describe 'get #index' do
-    let(:items_params) { { item_type: 0, happiness: 1, description: 'gotta hae more cowbell' } }
-    let(:retro_item) { RetroItem.create }
+    let(:retro_item) { FactoryGirl.create(:retro_item) }
 
     it 'assigns retro items' do
       get :index
