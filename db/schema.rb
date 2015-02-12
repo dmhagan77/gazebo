@@ -13,7 +13,7 @@
 
 ActiveRecord::Schema.define(version: 20140829154541) do
 
-  create_table "retro_items", force: true do |t|
+  create_table "retro_items", force: :cascade do |t|
     t.integer  "item_type"
     t.integer  "happiness"
     t.string   "description"

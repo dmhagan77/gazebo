@@ -1,9 +1,19 @@
-!!! 5
-%html
+!!!
+%html{:lang => "en"}
   %head
-    %title= 'We-Retro'
-    = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true
-    = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    %meta{:charset => "utf-8"}/
+    %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}/
+
+    %title= content_for?(:title) ? "Gazebo - #{content_for(:title)}" : "Gazebo"
+    
+    = stylesheet_link_tag    "application"
+    = javascript_include_tag "vendor/modernizr"
+    = javascript_include_tag "application", 'data-turbolinks-track' => true
     = csrf_meta_tags
+
   %body
+  %header
+    .gazebo.title Gazebo!
+    .gazebo.sub-title Where to gather and share ideas
+  #content
     = yield

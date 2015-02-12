@@ -1,0 +1,10 @@
+= form_for @retro_item do |f|
+  = f.label :description
+  = f.text_area :description
+
+  = f.label :happiness
+  = f.select :happiness, @statuses
+
+  = f.submit 'Add Retro Item'
+%a= link_to 'Cancel', retro_items_path
+

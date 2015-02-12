@@ -7,7 +7,7 @@ RSpec.describe ItemController, :type => :controller do
 
     it 'assigns retro items' do
       get :index
-      expect(assigns(:retro_items)).to eq(retro_item)
+      expect(assigns(:retro_items)).to eq([retro_item])
     end
 
     it 'returns http success' do
