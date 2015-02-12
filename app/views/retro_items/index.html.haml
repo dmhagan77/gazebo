@@ -1,0 +1,8 @@
+= content_for(:title) { 'Current Retro Items' } 
+%h1 Current Retro Items
+%a= link_to 'Add New Retro Item', new_retro_item_path
+
+#retro-items-list
+  - @retro_items.each do |retro_item|
+    .retro-item(class="#{retro_item.happiness}")
+      %a= link_to retro_item.description, edit_retro_item_path(retro_item)
